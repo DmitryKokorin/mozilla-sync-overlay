@@ -69,7 +69,7 @@ src_install() {
 	)
 	use postgres && (
         sed -e 's/mysql/postgresql/g;s/3306/5432/g' etc/mysql.conf >  etc/postgres.conf
-        sed -e 's/mysql.conf/postrges.conf/g' test_mysql.ini > postgres.ini
+        sed -e 's/mysql.conf/postrges.conf/g' tests_mysql.ini > postgres.ini
 		doins etc/postgres.conf
 		doins postgres.ini
 	)

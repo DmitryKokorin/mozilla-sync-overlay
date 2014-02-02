@@ -4,6 +4,10 @@
 
   02 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>
   mozilla-sync-server-full-1.0.9.ebuild:
+  typo fixed
+
+  02 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>
+  mozilla-sync-server-full-1.0.9.ebuild:
   postgres use flag added
 
 *mozilla-sync-server-full-1.0.9 (02 Feb 2014)
