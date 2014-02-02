@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>
+  +files/mozilla-sync-server-core-2.16.1_wsgiproxy2.patch:
+  added mozilla-sync-server-core-2.16.1_wsgiproxy2.patch
+
 *mozilla-sync-server-core-2.16.1 (02 Feb 2014)
 
   02 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>

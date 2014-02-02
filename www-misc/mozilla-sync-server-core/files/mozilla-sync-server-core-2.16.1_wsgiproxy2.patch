@@ -1,0 +1,72 @@
+diff -r 8187776ee424 Makefile
+--- a/Makefile	Fri Jan 24 14:58:51 2014 +1100
++++ b/Makefile	Mon Feb 03 00:18:04 2014 +0400
+@@ -58,7 +58,7 @@
+ build_extras:
+ 	$(INSTALL) MySQL-python
+ 	$(INSTALL) recaptcha-client
+-	$(INSTALL) wsgiproxy
++	$(INSTALL) wsgiproxy2
+ 	$(INSTALL) wsgi_intercept
+ 	$(INSTALL) "python-ldap == 2.3.13"
+ 	$(INSTALL) coverage
+diff -r 8187776ee424 dev-reqs.txt
+--- a/dev-reqs.txt	Fri Jan 24 14:58:51 2014 +1100
++++ b/dev-reqs.txt	Mon Feb 03 00:18:04 2014 +0400
+@@ -14,7 +14,7 @@
+ PyMySQL
+ pymysql_sa
+ pylibmc
+-WSGIProxy
++WSGIProxy2
+ recaptcha-client
+ metlog-py >= 0.9.5
+ metlog-cef
+diff -r 8187776ee424 prod-reqs.txt
+--- a/prod-reqs.txt	Fri Jan 24 14:58:51 2014 +1100
++++ b/prod-reqs.txt	Mon Feb 03 00:18:04 2014 +0400
+@@ -14,7 +14,7 @@
+ PyMySQL == 0.5
+ pymysql_sa == 1.0
+ pylibmc == 1.2.3
+-WSGIProxy == 0.2.2
++WSGIProxy2 == 0.4.1
+ recaptcha-client == 1.0.6
+ metlog-py == 0.9.8
+ metlog-cef == 0.2
+diff -r 8187776ee424 services/tests/support.py
+--- a/services/tests/support.py	Fri Jan 24 14:58:51 2014 +1100
++++ b/services/tests/support.py	Mon Feb 03 00:18:04 2014 +0400
+@@ -223,7 +223,7 @@
+     If TEST_REMOTE is set in the environ, will run against a real server.
+     """
+     import urlparse
+-    from wsgiproxy.exactproxy import proxy_exact_request
++    from wsgiproxy2.exactproxy import proxy_exact_request
+     from webtest import TestApp
+ 
+     # runs over a proxy
+diff -r 8187776ee424 setup.py
+--- a/setup.py	Fri Jan 24 14:58:51 2014 +1100
++++ b/setup.py	Mon Feb 03 00:18:04 2014 +0400
+@@ -38,7 +38,7 @@
+ from setuptools import setup, find_packages
+ 
+ install_requires = ['SQLAlchemy', 'Paste', 'PasteDeploy', 'WebOb',
+-                    'Routes', 'simplejson', 'cef', 'wsgiproxy', 'metlog-py']
++                    'Routes', 'simplejson', 'cef', 'wsgiproxy2', 'metlog-py']
+ 
+ 
+ # extracting the version number from the .spec file
+diff -r 8187776ee424 stage-reqs.txt
+--- a/stage-reqs.txt	Fri Jan 24 14:58:51 2014 +1100
++++ b/stage-reqs.txt	Mon Feb 03 00:18:04 2014 +0400
+@@ -14,7 +14,7 @@
+ PyMySQL == 0.5
+ pymysql_sa == 1.0
+ pylibmc == 1.2.3
+-WSGIProxy == 0.2.2
++WSGIProxy2 == 0.4.1
+ recaptcha-client == 1.0.6
+ metlog-py == 0.9.8
+ metlog-cef == 0.2
