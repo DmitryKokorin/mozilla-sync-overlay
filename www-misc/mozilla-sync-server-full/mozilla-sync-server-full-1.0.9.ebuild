@@ -29,12 +29,12 @@ esac
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ldap memcached mysql sqlite +wsgi"
+IUSE="ldap memcached mysql postgres sqlite +wsgi"
 
-REQUIRED_USE="|| ( ldap memcached mysql sqlite )"
+REQUIRED_USE="|| ( ldap memcached mysql postgres sqlite )"
 
 RDEPEND="www-misc/mozilla-sync-server-reg[${PYTHON_USEDEP}]
-		 www-misc/mozilla-sync-server-storage[${PYTHON_USEDEP},ldap?,mysql?,sqlite?]
+		 www-misc/mozilla-sync-server-storage[${PYTHON_USEDEP},ldap?,mysql?,postgres?,sqlite?]
 		 wsgi? (
 		 	|| ( www-apache/mod_wsgi www-servers/uwsgi[python] )
 		 )"
@@ -66,6 +66,12 @@ src_install() {
 	use mysql && (
 		doins etc/mysql.conf
 		newins tests_mysql.ini mysql.ini
+	)
+	use postgres && (
+        sed -e 's/mysql/postgresql/g;s/3306/5432/g' etc/mysql.conf >  etc/postgres.conf
+        sed -e 's/mysql.conf/postrges.conf/g' test_mysql.ini > postgres.ini
+		doins etc/postgres.conf
+		doins postgres.ini
 	)
 	use sqlite && (
 		newins /etc/sync.conf sqlite.conf
