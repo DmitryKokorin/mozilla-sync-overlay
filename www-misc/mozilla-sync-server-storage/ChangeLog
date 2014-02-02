@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/mozilla-sync-server-storage
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*mozilla-sync-server-storage-1.17.2 (02 Feb 2014)
+
+  02 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>
+  +mozilla-sync-server-storage-1.17.2.ebuild:
+  Version bump to 1.17.2, postgres use flag added
 
   27 Feb 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
   mozilla-sync-server-storage-1.15.3.ebuild:
@@ -26,4 +32,3 @@
   06 Feb 2013; Stijn Tintel (stintel) <stijn+gentoo@linux-ipv6.be>
   +mozilla-sync-server-storage-1.15.2.ebuild, +metadata.xml:
   Initial import. Ebuild by me.
-
