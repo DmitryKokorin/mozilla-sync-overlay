@@ -43,6 +43,7 @@ RDEPEND=">=dev-python/metlog-cef-0.2[${PYTHON_USEDEP}]
 		 >=dev-python/repoze-who-2.0[${PYTHON_USEDEP}]
 		 >=dev-python/routes-1.13
 		 >=dev-python/simplejson-2.6.2
+         >=dev-python/scrypt-0.6.1
 		 >=dev-python/sqlalchemy-0.7.9
 		 >=dev-python/webob-1.0.7
 		 >=dev-python/wsgiproxy2-0.1[${PYTHON_USEDEP}]
