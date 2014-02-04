@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>
+  mozilla-sync-server-full-1.0.9.ebuild:
+  typo fixed
+
   02 Feb 2014; Dmitry Kokorin <dmitry@kokorin.org>
   mozilla-sync-server-full-1.0.9.ebuild:
   typo fixed
